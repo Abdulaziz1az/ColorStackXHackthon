@@ -15,6 +15,8 @@ function App() {
     try {
       setLoading(true);
 
+      console.log("KEY:", import.meta.env.VITE_GEMINI_API_KEY);
+
       const genAI = new GoogleGenerativeAI(
         import.meta.env.VITE_GEMINI_API_KEY
       );
@@ -33,7 +35,7 @@ function App() {
       setSummary(text);
     } catch (error) {
       console.error(error);
-      setSummary("Something went wrong. Check your API key and try again.");
+      setSummary(error.message || "Something went wrong.");
     } finally {
       setLoading(false);
     }
