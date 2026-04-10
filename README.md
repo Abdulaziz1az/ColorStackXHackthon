@@ -4,4 +4,4 @@
 - Frontend: React + Vite
 - Backend: Node.js + Express
 - AI: Google Gemini API
-- Version Control: Git + GitHub
+- Version Control: Git + GitHub/
